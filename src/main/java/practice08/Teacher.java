@@ -22,7 +22,6 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-        result = "";
         if(getKlass() == null) {
             result = super.introduce() + " I am a Teacher. I teach No Class.";
         } else {
@@ -32,13 +31,11 @@ public class Teacher extends Person {
         return result;
     }
 
-    public String introduceWith(Student jerry) {
-        result = "";
-
-        if(klass.getNumber() != 2){
-            result = super.introduce() + " I am a Teacher. I don't teach " + jerry.getName() + ".";
+    public String introduceWith(Student student) {
+        if(student.getKlass().getNumber() != klass.getNumber()){
+            result = super.introduce() + " I am a Teacher. I don't teach " + student.getName() + ".";
         } else {
-            result = "My name is Tom. I am 21 years old. I am a Teacher. I teach " + jerry.getName() + ".";
+            result = "My name is Tom. I am 21 years old. I am a Teacher. I teach " + student.getName() + ".";
         }
 
         return result;
