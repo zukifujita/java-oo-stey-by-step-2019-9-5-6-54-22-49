@@ -28,4 +28,14 @@ public class Person {
         result = "My name is " + this.name + ". I am " + this.age + " years old.";
         return result;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        Person person = (Person) o;
+        if (o instanceof Person) {
+            return getId() == person.id;
+        }
+
+        return false;
+    }
 }

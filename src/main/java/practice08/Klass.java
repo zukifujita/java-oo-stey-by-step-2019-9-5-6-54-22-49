@@ -3,6 +3,7 @@ package practice08;
 public class Klass {
     private int number;
     private Student leader;
+    private String result;
 
     Klass(int number) {
         this.number = number;
@@ -13,17 +14,18 @@ public class Klass {
     }
 
     public String getDisplayName() {
-        String result = "Class " + this.number;
+        result = "Class " + this.number;
         return result;
     }
 
-    public Student assignLeader(Student jerry) {
-        this.leader = jerry;
-        if (this.leader != null) {
-            getLeader();
+    public Student assignLeader(Student student) {
+        this.leader = student;
+
+        if (this.leader != student) {
+            return null;
         }
 
-        return null;
+        return getLeader();
     }
 
     public Student getLeader() {

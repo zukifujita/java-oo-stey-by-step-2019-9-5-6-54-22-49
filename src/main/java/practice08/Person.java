@@ -1,7 +1,7 @@
 package practice08;
 
 public class Person {
-    private int id;
+    private final int id;
     private String name;
     private int age;
     private String result;
@@ -13,7 +13,7 @@ public class Person {
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public String getName() {
@@ -27,5 +27,10 @@ public class Person {
     public String introduce() {
         result = "My name is " + this.name + ". I am " + this.age + " years old.";
         return result;
+    }
+
+    public boolean equals(Object o) {
+        Person person = (Person) o;
+        return id == person.id;
     }
 }

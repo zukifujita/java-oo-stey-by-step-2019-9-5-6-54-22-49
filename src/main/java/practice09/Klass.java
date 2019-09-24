@@ -19,21 +19,22 @@ public class Klass {
         return result;
     }
 
-    public Student assignLeader(Student jerry) {
-        this.leader = jerry;
-        if (this.leader != null) {
-            getLeader();
+    public Student assignLeader(Student student) {
+        if (student.getKlass().getNumber() != getNumber()) {
+            System.out.print("It is not one of us.\n");
+        } else {
+            this.leader = student;
         }
 
-        return appendMember(jerry);
+        return getLeader();
     }
 
     public Student getLeader() {
         return leader;
     }
 
-    public Student appendMember(Student jerry) {
-        this.member = jerry;
-        return jerry;
+    public Student appendMember(Student student) {
+        this.member = student;
+        return member;
     }
 }

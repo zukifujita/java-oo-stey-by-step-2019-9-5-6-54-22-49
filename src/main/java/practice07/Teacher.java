@@ -31,13 +31,13 @@ public class Teacher extends Person {
         return result;
     }
 
-    public String introduceWith(Student jerry) {
+    public String introduceWith(Student student) {
         result = "";
 
-        if(klass.getNumber() != 2){
-            result = super.introduce() + " I am a Teacher. I don't teach " + jerry.getName() + ".";
+        if(student.getKlass().getNumber() != klass.getNumber()){
+            result = super.introduce() + " I am a Teacher. I don't teach " + student.getName() + ".";
         } else {
-            result = "My name is Tom. I am 21 years old. I am a Teacher. I teach " + jerry.getName() + ".";
+            result = "My name is Tom. I am 21 years old. I am a Teacher. I teach " + student.getName() + ".";
         }
 
         return result;
