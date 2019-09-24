@@ -24,7 +24,7 @@ public class Practice08Test {
     public void should_person_with_same_id_be_same_one() throws Exception {
         Person person1 = new Person(1, "Tom", 21);
         Person person2 = new Person(1, "Tom", 21);
-        assertThat(person1).isEqualsToByComparingFields(person2);
+        assertThat(person1).isEqualTo(person2);
     }
 
     @Test
@@ -44,12 +44,12 @@ public class Practice08Test {
         assertThat(klass.getDisplayName()).isEqualTo("Class 2");
     }
 
-//    @Test
-//    public void should_class_assign_a_leader() throws Exception {
-//        Student jerry = new Student(1, "Jerry", 8, klass);
-//        klass.assignLeader(jerry);
-//        assertThat(klass.getLeader()).isEqualTo(jerry);
-//    }
+    @Test
+    public void should_class_assign_a_leader() throws Exception {
+        Student jerry = new Student(1, "Jerry", 8, klass);
+        klass.assignLeader(jerry);
+        assertThat(klass.getLeader()).isEqualTo(jerry);
+    }
 
     @Test
     public void should_student_have_name_age_and_class_number() throws Exception {

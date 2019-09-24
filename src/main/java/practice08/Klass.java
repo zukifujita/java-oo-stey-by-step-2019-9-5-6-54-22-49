@@ -2,7 +2,7 @@ package practice08;
 
 public class Klass {
     private int number;
-    private String leader;
+    private Student leader;
 
     Klass(int number) {
         this.number = number;
@@ -17,14 +17,16 @@ public class Klass {
         return result;
     }
 
-//    public String getLeader() {
-//
-//    }
+    public Student assignLeader(Student jerry) {
+        this.leader = jerry;
+        if (this.leader != null) {
+            getLeader();
+        }
 
-    public void assignLeader(Student student) {
-        student.getId();
-        student.getName();
-        student.getAge();
-        student.getKlass();
+        return null;
+    }
+
+    public Student getLeader() {
+        return leader;
     }
 }

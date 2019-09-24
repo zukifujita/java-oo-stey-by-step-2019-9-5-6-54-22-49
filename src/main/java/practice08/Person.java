@@ -4,6 +4,7 @@ public class Person {
     private int id;
     private String name;
     private int age;
+    private String result;
 
     Person(int id, String name, int age) {
         this.id = id;
@@ -24,7 +25,7 @@ public class Person {
     }
 
     public String introduce() {
-        String result = "My name is " + this.name + ". I am " + this.age + " years old.";
+        result = "My name is " + this.name + ". I am " + this.age + " years old.";
         return result;
     }
 }

@@ -3,6 +3,7 @@ package practice05;
 public class Person {
     private String name;
     private int age;
+    private String result;
 
     Person(String name, int age) {
         this.name = name;
@@ -18,7 +19,7 @@ public class Person {
     }
 
     public String introduce() {
-        String result = "My name is " + this.name + ". I am " + this.age + " years old.";
+        result = "My name is " + this.name + ". I am " + this.age + " years old.";
         return result;
     }
 }

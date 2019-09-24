@@ -4,6 +4,7 @@ public class Student extends Person{
     private String name;
     private int age;
     private int klass;
+    private String result;
 
     Student(String name, int age, int klass) {
         super(name, age);
@@ -15,7 +16,7 @@ public class Student extends Person{
     }
 
     public String introduce() {
-        String result = "I am a Student. I am at Class " + getKlass() + ".";
+        result = "I am a Student. I am at Class " + getKlass() + ".";
         return result;
     }
 }

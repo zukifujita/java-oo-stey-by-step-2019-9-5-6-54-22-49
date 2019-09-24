@@ -2,6 +2,7 @@ package practice07;
 
 public class Klass {
     private int number;
+    private String result;
 
     Klass(int number) {
         this.number = number;
@@ -12,7 +13,7 @@ public class Klass {
     }
 
     public String getDisplayName() {
-        String result = "Class " + this.number;
+        result = "Class " + this.number;
         return result;
     }
 }

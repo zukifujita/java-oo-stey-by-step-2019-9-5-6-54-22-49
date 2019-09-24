@@ -4,6 +4,7 @@ public class Teacher extends Person {
     private int id;
     private String name;
     private int age;
+    private String result;
     private Klass klass;
 
     Teacher(int id, String name, int age, Klass klass) {
@@ -21,7 +22,7 @@ public class Teacher extends Person {
 
     @Override
     public String introduce() {
-        String result = "";
+        result = "";
         if(getKlass() == null) {
             result = super.introduce() + " I am a Teacher. I teach No Class.";
         } else {
@@ -32,7 +33,7 @@ public class Teacher extends Person {
     }
 
     public String introduceWith(Student jerry) {
-        String result = "";
+        result = "";
 
         if(klass.getNumber() != 2){
             result = super.introduce() + " I am a Teacher. I don't teach " + jerry.getName() + ".";

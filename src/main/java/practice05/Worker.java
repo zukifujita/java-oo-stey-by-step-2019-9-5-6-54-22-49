@@ -3,6 +3,7 @@ package practice05;
 public class Worker extends Person{
     private String name;
     private int age;
+    private String result;
 
     public Worker(String name, int age) {
         super(name, age);
@@ -10,7 +11,7 @@ public class Worker extends Person{
 
     @Override
     public String introduce() {
-        String result = super.introduce() + " I am a Worker. I have a job.";
+        result = super.introduce() + " I am a Worker. I have a job.";
         return result;
     }
 }
