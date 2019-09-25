@@ -19,11 +19,11 @@ public class Klass {
         return result;
     }
 
-    public Student assignLeader(Student studName) {
-        if (studName.getKlass().getNumber() != getNumber()) {
+    public Student assignLeader(Student student) {
+        if (student.getKlass().getNumber() != getNumber()) {
             System.out.print("It is not one of us.\n");
         } else {
-            this.leader = studName;
+            this.leader = student;
         }
 
         return getLeader();
@@ -33,8 +33,8 @@ public class Klass {
         return leader;
     }
 
-    public Student appendMember(Student studName) {
-        this.member = studName;
+    public Student appendMember(Student student) {
+        this.member = student;
         return member;
     }
 }
