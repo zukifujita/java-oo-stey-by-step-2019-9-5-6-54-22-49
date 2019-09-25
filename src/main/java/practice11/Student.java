@@ -5,7 +5,7 @@ public class Student extends Person{
     private String name;
     private int age;
     private String result;
-    private Klass klass;
+    public Klass klass;
 
     Student(int id, String name, int age) {
         super(id, name, age);

@@ -1,7 +1,8 @@
 package practice11;
 
 public class Klass {
-    private int number;
+    public int number;
+    public String teacherName;
     private Student leader;
     private Student member;
     private String result;
@@ -22,7 +23,8 @@ public class Klass {
     public Student assignLeader(Student student) {
         if (student.getKlass().getNumber() != getNumber()) {
             System.out.print("It is not one of us.\n");
-        } else {
+        } else if (student.getKlass().getNumber() == getNumber()) {
+            System.out.print("I am " + teacherName + ". I know " + student.getName() + " become Leader of Class 2.\n");
             this.leader = student;
         }
 
@@ -34,6 +36,8 @@ public class Klass {
     }
 
     public Student appendMember(Student student) {
+        System.out.print("I am " + teacherName + ". I know " + student.getName() + " has joined Class " + getNumber() + ".\n");
+        student.klass.number = number;
         this.member = student;
         return member;
     }
